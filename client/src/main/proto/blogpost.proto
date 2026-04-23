@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package model;
+
+option java_package = "at.sve2.services.grpc.model";
+option java_outer_classname = "PostProto";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
+service PostService {
+  rpc FindById(google.protobuf.StringValue) returns (Post) {}
+  rpc GetAllPosts(google.protobuf.Empty) returns (Posts) {}
+  rpc AddPost(Post) returns (Post) {}
+}
+
+service AuthorService {
+  rpc FindById(google.protobuf.StringValue) returns (Author) {}
+  rpc GetAllAuthors(google.protobuf.Empty) returns (Authors) {}
+  rpc CreateAuthor(Author) returns (Author) {}
+}
+
+message Author {
+  string id = 1;
+  string name = 2;
+  string thumbnail = 3;
+  Posts posts = 4;
+}
+
+message Authors {
+  repeated Author authors = 1;
+}
+
+message Post {
+  string id = 1;
+  string title = 2;
+  string text = 3;
+  CategoryType category = 4;
+  enum CategoryType {
+    COOKING = 0;
+    SOCIETY = 1;
+    TECHNOLOGY = 3;
+  }
+  string authorId = 5;
+}
+
+message Posts {
+  repeated Post posts = 1;
+}

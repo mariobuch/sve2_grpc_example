@@ -1,0 +1,7 @@
+spring.application.name: customer-service-grpc
+spring.output.ansi.enabled: always
+
+
+spring.grpc.server.port: 9091
+
+spring.grpc.client.channels.local.address: localhost:9091
