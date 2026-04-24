@@ -1,0 +1,6 @@
+spring:
+  application.name: demo
+  graphql:
+    graphiql.enabled: true
+    
+management.endpoints.web.exposure.include: metrics,info,health
