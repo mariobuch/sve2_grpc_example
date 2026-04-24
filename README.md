@@ -7,7 +7,7 @@ make `(Blog)Posts`
 ```
 ┌────────────┐           ┌─────────┐
 │ Author     │ ────────► │Post     │
-│  -name     │           │ -title  │
+│  -name     │  1     n  │ -title  │
 │  -thumbail │           │ -text   │
 │  -birthday │           │ -tag    │
 │  -[posts]  │           │         │
@@ -18,7 +18,7 @@ make `(Blog)Posts`
 * java 21
 * maven
 
-## setup gRPC
+## gRPC
 * open a command in the /client folder: 
   ```
     mvn package
