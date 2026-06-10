@@ -2,7 +2,7 @@
 
 This is a simple sample project to compare the concepts mentioned in the title 
 with each other. The use case is always the same, you have `Authors` which can
-make `(Blog)Posts`
+make `(Blog)Posts`.
 
 ```
 ┌────────────┐           ┌─────────┐
