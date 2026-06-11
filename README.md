@@ -37,7 +37,7 @@ make `(Blog)Posts`.
   ```
   mvn package
   cd target
-  java -jar java -jar demo-0.0.1-SNAPSHOT.jar
+  java -jar demo-0.0.1-SNAPSHOT.jar
   ```
 * GraphQL: [local browser UI](http://localhost:8080/graphiql?path=/graphql)
   ```
